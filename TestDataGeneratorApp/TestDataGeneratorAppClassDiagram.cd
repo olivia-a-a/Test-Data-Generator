@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestDataGeneratorApp.Models.DateOption" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAYAgAAAAAACAQAAAAAAAAAiAAAAQAAAgEAQACAA=</HashCode>
+      <FileName>Models\DateOption.cs</FileName>
+      <NewMemberFileName>Models\FieldOptions.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestDataGeneratorApp.Models.StringOption" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEB4AgAAQAABCAQBAEAICCAACAIAAQAAAwAAQACAA=</HashCode>
+      <FileName>Models\StringOption.cs</FileName>
+      <NewMemberFileName>Models\FieldOptions.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestDataGeneratorApp.Models.Table" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAACAAABAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Table.cs</FileName>
+      <NewMemberFileName>Models\TestDataConfig.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.Models.TestDataConfig" Collapsed="true">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAQAAAAAAgAEEAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\TestDataConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.Presenters.DateFieldOptionPresenter" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAQAAAEAAAAAACA=</HashCode>
+      <FileName>Presenters\DateFieldOptionPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.Presenters.FileNamePresenter" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>Presenters\FileNamePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.Presenters.StringFieldOptionPresenter" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAhAAAAAAAAAEAAAAAAQwKAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Presenters\StringFieldOptionPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.Presenters.TestGeneratorPresenter" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACkCACAASAJAQAgCAAAAAAAUAAIAMAAAIgQCEBAgQE=</HashCode>
+      <FileName>Presenters\TestGeneratorPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.DateFieldOptionForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA2AVwggJKoAJBBgAECAAAACAAikBAIYICAAoAQACAA=</HashCode>
+      <FileName>DateFieldOptionForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestDataGeneratorApp.FileNameForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACIBCBAAggCQAAACAAAAAAAAIgAAgABAAAA=</HashCode>
+      <FileName>FileNameForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestDataGeneratorApp.Program" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataGeneratorApp.StringFieldOptionForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAMV6AgCD4IYBAAAkHEgICDIAioAgAwIgE0wAQBIpA=</HashCode>
+      <FileName>StringFieldOptionForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestDataGeneratorApp.TestGeneratorForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAKAccgIhTABUAggYgSAqioGRBAwLDBLtAwiowBTBZA=</HashCode>
+      <FileName>TestGeneratorForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.221" />
+  </Class>
+  <Interface Name="TestDataGeneratorApp.Models.IFieldFormat" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAAQACAA=</HashCode>
+      <FileName>Models\IFieldFormat.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TestDataGeneratorApp.Views.IDateFieldOptionView" Collapsed="true">
+    <Position X="3.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAVwggIAAAJAAAAEAAAAAAAAiABAAQACAAoAQACAA=</HashCode>
+      <FileName>Views\IDateFieldOptionView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TestDataGeneratorApp.Views.IFileNameView" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAgAQAAAAAAAAAAAAAgAAgABAAAA=</HashCode>
+      <FileName>Views\IFileNameView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TestDataGeneratorApp.Views.IStringFieldOptionView" Collapsed="true">
+    <Position X="3.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMRyAgAAgIIBAAAEAEAICDAAiAAgAgAgE0gAQAIoA=</HashCode>
+      <FileName>Views\IStringFieldOptionView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TestDataGeneratorApp.Views.ITestGeneratorView" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAQMgIASAAAAgAIgAACiIAQAAALDBApAgCggBCAAA=</HashCode>
+      <FileName>Views\ITestGeneratorView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TestDataGeneratorApp.Views.IOptionView" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\IOptionView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TestDataGeneratorApp.Presenters.Tables" Collapsed="true">
+    <Position X="3.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presenters\TestGeneratorPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

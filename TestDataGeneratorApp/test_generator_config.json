@@ -1,0 +1,21 @@
+{
+	"header_table": {
+		"columns": ["Record Type", "File Type", "Originating System", "Receiving System", "Creation Date", "Creation Time", "Sequence Number", "File Version", "Record Quantity"],
+		"rows": []
+	},
+
+	"data_table": {
+		"columns": ["Record Type", "Event Number", "Event Date", "User PID", "User OUDN", "User OUID", "User Role", "Event String 1", "Event String 2", "Event String 3",
+		"Event String 4", "Event String 5", "Event String 6", "Event String 7", "Event String 8", "Event String 9", "Event String 10", "Event String 11", "Event String 12",
+		"Event String 13", "Event String 14", "Event String 15", "Event String 16", "Event String 17", "Event String 18", "Event String 19", "Event String 20",  
+		"Event Date 1", "Event Date 2", "Event Date 3",
+		"Event Number 1", "Event Number 2", "Event Number 3", "Event Number 4", "Event Number 5", "Event Number 6", "Event Number 7", "Event Number 8", "Event Number 9",
+		"Event Number 10", "Event Number 11", "Event Number 12", "Event Number 13", "Event Number 14", "Event Number 15", "Record Quantity"],
+		"rows": []
+	},
+
+	"trailer_table": {
+		"columns": ["Record Type", "File Type", "Record Count", "Last In Sequence Flag", "Record Quantity"],
+		"rows": []
+	}
+}
