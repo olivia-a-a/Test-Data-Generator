@@ -16,8 +16,6 @@ namespace TestDataGeneratorApp
         private object _selected_cell_value = "";
         private (int Row, int Column) _selected_cell_coords = (-1, -1);
         private string _selected_field_option = "";
-        private string _selected_column_name = "";
-        private DataGridView _selected_table;
 
         private TestGeneratorPresenter Presenter;
 
