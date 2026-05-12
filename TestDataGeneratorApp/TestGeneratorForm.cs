@@ -31,7 +31,7 @@ namespace TestDataGeneratorApp
         public string Msg { get => _msg; set => _msg = value; }
 
         public string SelectedFieldOption { get => _selected_field_option; set => _selected_field_option = value; }
-
+        
         public Tables SelectedTable { get; set; }
 
         public (int Row, int Column) SelectedCellCoords { get => _selected_cell_coords; set => _selected_cell_coords = value; }
@@ -119,6 +119,7 @@ namespace TestDataGeneratorApp
             for (int i = 0; i < table.columns.Count; i++)
             {
                 dataGridView.Columns.Add(table.columns[i], table.columns[i]);
+                dataGridView.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
 
                 if (EditableColumns.Contains(dataGridView.Columns[i].Name))
                 {
@@ -128,6 +129,8 @@ namespace TestDataGeneratorApp
                 {
                     dataGridView.Columns[i].ReadOnly = true;
                 }
+
+
             }
 
             for (int r = 0; r < table.rows.Count; r++)

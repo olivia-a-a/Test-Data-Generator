@@ -42,7 +42,8 @@ namespace GeneratorAppTest
             StringField format = new();
             Form.FieldFormat = format;
 
-            Form.IsFirstName = true; // simulating selection of an option
+            Form.IsFirstName = true; 
+            Form.FirstNameCheckBox_CheckStateChanged(); // simulating selection of an option
 
             string ExpectedDisplayValue = "String Format";
 
@@ -203,6 +204,11 @@ namespace GeneratorAppTest
         public void StringFieldOptionForm_Load()
         {
             LoadView?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void FirstNameCheckBox_CheckStateChanged()
+        {
+            FirstNameChecked?.Invoke(this, EventArgs.Empty);
         }
 
         public void StringFieldOptionForm_FormClosing()

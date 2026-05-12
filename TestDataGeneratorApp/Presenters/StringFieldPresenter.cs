@@ -50,15 +50,15 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.Prefix, 
                 StringFieldOptionView.StaysTheSame);
 
-            if (StringFieldOptionView.MaxLength > 0 || StringFieldOptionView.MinLength > 0 || baseType != StringFieldBaseType.None || 
-                StringFieldOptionView.ContainsNumbers || StringFieldOptionView.ContainsLowercase || 
-                StringFieldOptionView.Prefix.Length > 0 || StringFieldOptionView.StaysTheSame)
+            if (StringFieldOptionView.Custom.Length > 0)
+            {
+                SetDisplayValue(StringFieldOptionView.Custom);                
+            }
+            else if (StringFieldOptionView.MaxLength > 0 || StringFieldOptionView.MinLength > 0 || baseType != StringFieldBaseType.None ||
+                StringFieldOptionView.ContainsNumbers || StringFieldOptionView.ContainsLowercase ||
+                StringFieldOptionView.Prefix.Length > 0 || StringFieldOptionView.StaysTheSame) 
             {
                 SetDisplayValue("String Format");
-            }
-            else if (StringFieldOptionView.Custom.Length > 0)
-            {
-                SetDisplayValue(StringFieldOptionView.Custom);
             }
             else 
             {

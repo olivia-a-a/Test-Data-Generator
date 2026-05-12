@@ -292,6 +292,7 @@ namespace TestDataGeneratorApp.Presenters
 
         public void ShowOptionForm(object? sender, EventArgs e)
         {
+            SetSelectedTable();
             SetSelectedCell();
             if (TestGeneratorView.SelectedFieldOption == "String Format")
             {
@@ -311,6 +312,7 @@ namespace TestDataGeneratorApp.Presenters
             TestGeneratorView.OptionForm.ShowAsDialogue();
             SelectedTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column] = TestGeneratorView.OptionForm.FieldFormat;
             SelectedTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column].FieldName = SelectedCell.FieldName;
+            
             SetSelectedCell();
             TestGeneratorView.SelectedCellValue = SelectedCell.DisplayValue;
 
@@ -336,12 +338,13 @@ namespace TestDataGeneratorApp.Presenters
         public void ShowFieldOptions(object? sender, EventArgs e)
         {
             // only enable the context menu strip if its a valid cell thats been selected
-            SetSelectedCell();
+            SetSelectedTable();
             if (TestGeneratorView.SelectedCellCoords.Row < 0 || TestGeneratorView.SelectedCellCoords.Column < 0)
             {                
                 TestGeneratorView.EnableFieldOptions = false; 
             }
             else {
+                SetSelectedCell();
                 if (EditableColumns.Contains(SelectedCell.FieldName))
                 {
                     TestGeneratorView.EnableFieldOptions = false;
@@ -355,6 +358,7 @@ namespace TestDataGeneratorApp.Presenters
 
         public void EditCellData(object? sender, EventArgs e)
         {
+            SetSelectedTable();
             SetSelectedCell();
             string editedValue = TestGeneratorView.SelectedCellValue.ToString() ?? "";
 
@@ -375,7 +379,7 @@ namespace TestDataGeneratorApp.Presenters
 
         public void CheckTableSelectedToAddRow(object? sender, EventArgs e)
         {
-            SetSelectedCell();
+            SetSelectedTable();
             List<IField> FetchedRow = [];
 
             for (int i = 0; i < SelectedTable.columns.Count; i++)
@@ -392,48 +396,46 @@ namespace TestDataGeneratorApp.Presenters
 
         public void CheckTableSelectedToDeleteRow(object? sender, EventArgs e)
         {
-            SetSelectedCell();
+            SetSelectedTable();
             SelectedTable.rows.RemoveAt(TestGeneratorView.SelectedCellCoords.Row);
+        }
+
+        private void SetSelectedTable()
+        {
+            switch (TestGeneratorView.SelectedTable)
+            {
+                case Tables.Header:
+                    SelectedTable = HeaderTable;
+                    break;
+                case Tables.Data:
+                    SelectedTable = DataTable;
+                    break;
+                case Tables.Trailer:
+                    SelectedTable = TrailerTable;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void SetSelectedCell()
         {
-            if (TestGeneratorView.SelectedCellCoords.Row < 0 || TestGeneratorView.SelectedCellCoords.Column < 0)
+            switch (TestGeneratorView.SelectedTable)
             {
-                switch (TestGeneratorView.SelectedTable)
-                {
-                    case Tables.Header:
-                        SelectedTable = HeaderTable;
-                        break;
-                    case Tables.Data:
-                        SelectedTable = DataTable;
-                        break;
-                    case Tables.Trailer:
-                        SelectedTable = TrailerTable;
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else
-            {
-                switch (TestGeneratorView.SelectedTable)
-                {
-                    case Tables.Header:
-                        SelectedTable = HeaderTable;
-                        SelectedCell = HeaderTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
-                        break;
-                    case Tables.Data:
-                        SelectedTable = DataTable;
-                        SelectedCell = DataTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
-                        break;
-                    case Tables.Trailer:
-                        SelectedTable = TrailerTable;
-                        SelectedCell = TrailerTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
-                        break;
-                    default:
-                        break;
-                }
+                case Tables.Header:
+                    SelectedTable = HeaderTable;
+                    SelectedCell = HeaderTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
+                    break;
+                case Tables.Data:
+                    SelectedTable = DataTable;
+                    SelectedCell = DataTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
+                    break;
+                case Tables.Trailer:
+                    SelectedTable = TrailerTable;
+                    SelectedCell = TrailerTable.rows[TestGeneratorView.SelectedCellCoords.Row][TestGeneratorView.SelectedCellCoords.Column];
+                    break;
+                default:
+                    break;
             }
         }
 
