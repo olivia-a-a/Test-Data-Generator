@@ -158,13 +158,20 @@ namespace TestDataGeneratorApp.Presenters
             StringFieldOptionView.IsYesNoEnabled = true;
             StringFieldOptionView.IsTrueFalseEnabled = true;
             StringFieldOptionView.IsPostcodeEnabled = true;
+            StringFieldOptionView.StaysTheSameEnabled = true;
 
             StringFieldOptionView.CustomEnabled = true;
+            StringFieldOptionView.StaysTheSame = false;
             StringFieldOptionView.ContainsLowercase = false;
+            StringFieldOptionView.ContainsLowercaseEnabled = true;
             StringFieldOptionView.ContainsUppercase = false;
+            StringFieldOptionView.ContainsUppercaseEnabled = true;
             StringFieldOptionView.ContainsNumbers = false;
+            StringFieldOptionView.ContainsNumbersEnabled = true;
             StringFieldOptionView.MaxLength = 0;
+            StringFieldOptionView.MaxLengthEnabled = true;
             StringFieldOptionView.MinLength = 0;
+            StringFieldOptionView.MinLengthEnabled = true;
             baseType = StringFieldBaseType.None;
         }
 
@@ -183,6 +190,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsLowercase = true;
@@ -213,6 +221,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsLowercase = true;
@@ -243,6 +252,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsLowercase = true;
@@ -273,6 +283,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsLowercase = true;
@@ -303,6 +314,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsLowercase = true;
@@ -334,14 +346,18 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSame = true;
+                StringFieldOptionView.StaysTheSameEnabled = false;
 
+                StringFieldOptionView.ContainsLowercase = false;
                 StringFieldOptionView.ContainsLowercaseEnabled = false;
+                StringFieldOptionView.ContainsUppercase = false;
                 StringFieldOptionView.ContainsUppercaseEnabled = false;
+                StringFieldOptionView.ContainsNumbers = false;
                 StringFieldOptionView.ContainsNumbersEnabled = false;
                 StringFieldOptionView.MaxLengthEnabled = false;
                 StringFieldOptionView.MinLengthEnabled = false;
-                StringFieldOptionView.StaysTheSame = true;
-                StringFieldOptionView.StaysTheSameEnabled = false;
+                
             }
             else
             {
@@ -364,14 +380,12 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.CustomEnabled = false;
                 StringFieldOptionView.ContainsNumbers = true;
-                StringFieldOptionView.ContainsNumbersEnabled = false;
                 StringFieldOptionView.ContainsUppercase = false;
-                StringFieldOptionView.ContainsUppercaseEnabled = false;
                 StringFieldOptionView.ContainsLowercase = false;
-                StringFieldOptionView.ContainsLowercaseEnabled = false;
 
                 StringFieldOptionView.MaxLength = 20;
                 StringFieldOptionView.MinLength = 0;
@@ -399,8 +413,9 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
                 StringFieldOptionView.IsPostcodeEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
-                StringFieldOptionView.CustomEnabled = false;
+                StringFieldOptionView.ContainsNumbers = false;
                 StringFieldOptionView.ContainsLowercase = true;
                 StringFieldOptionView.ContainsUppercase = false;
                 StringFieldOptionView.ContainsNumbers = true;
@@ -431,8 +446,9 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsPhoneNumberEnabled = false;
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
-                StringFieldOptionView.CustomEnabled = false;
+
                 StringFieldOptionView.ContainsLowercase = false;
                 StringFieldOptionView.ContainsUppercase = true;
                 StringFieldOptionView.ContainsNumbers = true;
@@ -463,6 +479,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsPhoneNumberEnabled = false;
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.ContainsLowercase = true;
                 StringFieldOptionView.ContainsUppercase = true;
@@ -494,6 +511,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsPhoneNumberEnabled = false;
                 StringFieldOptionView.IsYesNoEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.ContainsLowercase = false;
                 StringFieldOptionView.ContainsUppercase = true;
@@ -525,6 +543,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsPhoneNumberEnabled = false;
                 StringFieldOptionView.IsNINOEnabled = false;
                 StringFieldOptionView.IsTrueFalseEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.ContainsLowercase = true;
                 StringFieldOptionView.ContainsUppercase = true;
@@ -556,6 +575,7 @@ namespace TestDataGeneratorApp.Presenters
                 StringFieldOptionView.IsPhoneNumberEnabled = false;
                 StringFieldOptionView.IsNINOEnabled = false;
                 StringFieldOptionView.IsYesNoEnabled = false;
+                StringFieldOptionView.StaysTheSameEnabled = true;
 
                 StringFieldOptionView.ContainsLowercase = true;
                 StringFieldOptionView.ContainsUppercase = true;

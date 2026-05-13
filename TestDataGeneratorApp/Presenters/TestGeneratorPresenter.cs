@@ -57,7 +57,7 @@ namespace TestDataGeneratorApp.Presenters
             } 
             catch (FileNotFoundException)
             {
-                TestGeneratorView.Msg = $"File {JSONPath} not found. \nPlease ensure the .exe is in the same directory as {JSONPath}";
+                TestGeneratorView.Msg = $"File {JSONPath} not found. \n\nPlease ensure the .exe is in the same directory as {JSONPath} before closing the application and running it again.";
                 TestGeneratorView.show_Message();
             }
         }
@@ -70,7 +70,7 @@ namespace TestDataGeneratorApp.Presenters
             }
             catch (JsonException error)
             {
-                TestGeneratorView.Msg = $"The JSON file at {JSONPath} contains an error. Please use the information below to correct the error before restarting the application: \n\n{error.Message}";
+                TestGeneratorView.Msg = $"The JSON file at {JSONPath} contains an error. Please use the information below to correct the error before closing the application and running it again: \n\n{error.Message}";
                 TestGeneratorView.show_Message();
             }
         }
@@ -80,8 +80,6 @@ namespace TestDataGeneratorApp.Presenters
             if (!columns.Contains(RequiredColumn))
             {
                 columns.Add(RequiredColumn);
-                TestGeneratorView.Msg = $"Added the required {RequiredColumn} column.";
-                TestGeneratorView.show_Message();
             }
             else
             {
@@ -117,7 +115,7 @@ namespace TestDataGeneratorApp.Presenters
 
             if (duplicatedColumns.Length > 0)
             {
-                TestGeneratorView.Msg = $"Removed the following duplicated column(s) {duplicatedColumns}";
+                TestGeneratorView.Msg = $"Removed the following duplicated column(s) {duplicatedColumns}. Please close this message box.";
                 TestGeneratorView.show_Message();
             }            
         }
@@ -146,7 +144,7 @@ namespace TestDataGeneratorApp.Presenters
 
             if (blanksRemoved > 0)
             {
-                TestGeneratorView.Msg = $"Removed {blanksRemoved} blank column(s)";
+                TestGeneratorView.Msg = $"Removed {blanksRemoved} blank column(s). Please close this message box.";
                 TestGeneratorView.show_Message();
             }
         }
@@ -161,6 +159,14 @@ namespace TestDataGeneratorApp.Presenters
         public void SetupTestDataTables(object? sender, EventArgs e)
         {
             ReadJSONFile();
+            if (string.IsNullOrEmpty(JSONData))
+            {
+                TestGeneratorView.AddHeaderRowEnabled = false;
+                TestGeneratorView.AddDataRowEnabled = false;
+                TestGeneratorView.AddTrailerRowEnabled = false;
+                TestGeneratorView.GenerateBtnEnabled = false;
+                return;
+            }
             SerialiseJSONFile();
 
             TestGeneratorView.EditableColumns.AddRange(EditableColumns);
