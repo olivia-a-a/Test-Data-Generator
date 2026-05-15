@@ -2,20 +2,58 @@
 
 ## How To Use 
 
-1) Make sure test_generator_config.json is in the same directory as the .exe
-
-2) Add the field names you want in test_generator_config.json as pictured below.
-
-<img width="999" height="63" alt="image" src="https://github.com/user-attachments/assets/a8a0f98b-1780-47a1-a2ea-c65ef621671b" />
+1) Use your preferred text editor to make a .json file called test_generator_config.json
 
 
-The system can currently handle a maximum of 3 different record formats (labelled header, data and trailer).
+2) Copy the following JSON into test_generator_config.json
 
-Do not enter anything into rows.
+```
+{
+	"header_table": {
+		"columns": [],
+		"rows": []
+	},
+
+	"data_table": {
+		"columns": [],
+		"rows": []
+	},
+
+	"trailer_table": {
+		"columns": [],
+		"rows": []
+	}
+}
+```
+
+3) In the `columns` field add in the names you would like each field in your record to have. Example below:
+
+```
+{
+	"header_table": {
+		"columns": ["File Type", "Origin Server", "Receiving Server"],
+		"rows": []
+	},
+
+	"data_table": {
+		"columns": ["First Name", "Last Names", "DOB", "Company Name"],
+		"rows": []
+	},
+
+	"trailer_table": {
+		"columns": ["File Type", "Record Quantity"],
+		"rows": []
+	}
+}
+```
+
+Note: Do not put anything in the `rows` field.
+
+4) Ensure the test_generator_config.json is in the same directory as the TestDataGeneratorApp.exe.
 
 
-3) Open the .exe and follow the in-app instructions to generate your data.
+5) Open the .exe and follow the in-app instructions to generate your data.
 
 
 
-NOTE: This application uses the [Bogus library](https://github.com/bchavez/Bogus) to generate data.
+This application uses the [Bogus library](https://github.com/bchavez/Bogus) to generate data.
