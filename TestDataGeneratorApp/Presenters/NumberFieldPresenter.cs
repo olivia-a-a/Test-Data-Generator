@@ -61,8 +61,24 @@ namespace TestDataGeneratorApp.Presenters
                 NumberFieldOptionView.show_Message();
             }
 
-            NewNumOption.MinNum = NumberFieldOptionView.MinNum;
-            NewNumOption.MaxNum = NumberFieldOptionView.MaxNum;
+            if (NumberFieldOptionView.MinNum == "")
+            {
+                NewNumOption.MinNum = "0";
+            }
+            else
+            {
+                NewNumOption.MinNum = NumberFieldOptionView.MinNum;
+            }
+
+            if (NumberFieldOptionView.MaxNum == "")
+            {
+                NewNumOption.MaxNum = "0";
+            }
+            else
+            {
+                NewNumOption.MaxNum = NumberFieldOptionView.MaxNum;
+            }
+
             NewNumOption.Custom = NumberFieldOptionView.Custom;
             NewNumOption.DecimalPlaces = (int)NumberFieldOptionView.DecimalPlace;
             NewNumOption.StaysTheSame = NumberFieldOptionView.StaysTheSame;

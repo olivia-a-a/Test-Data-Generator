@@ -74,6 +74,7 @@
             // MaxStringLength
             // 
             MaxStringLength.Location = new Point(199, 30);
+            MaxStringLength.Maximum = new decimal(new int[] { 4000, 0, 0, 0 });
             MaxStringLength.Name = "MaxStringLength";
             MaxStringLength.Size = new Size(76, 31);
             MaxStringLength.TabIndex = 2;
@@ -81,6 +82,7 @@
             // MinStringLength
             // 
             MinStringLength.Location = new Point(199, 68);
+            MinStringLength.Maximum = new decimal(new int[] { 4000, 0, 0, 0 });
             MinStringLength.Name = "MinStringLength";
             MinStringLength.Size = new Size(76, 31);
             MinStringLength.TabIndex = 4;

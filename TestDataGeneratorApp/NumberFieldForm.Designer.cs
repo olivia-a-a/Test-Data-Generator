@@ -123,7 +123,6 @@
             // 
             DecimalPlaces.Location = new Point(186, 156);
             DecimalPlaces.Maximum = new decimal(new int[] { 16, 0, 0, 0 });
-            DecimalPlaces.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
             DecimalPlaces.Name = "DecimalPlaces";
             DecimalPlaces.Size = new Size(61, 31);
             DecimalPlaces.TabIndex = 4;

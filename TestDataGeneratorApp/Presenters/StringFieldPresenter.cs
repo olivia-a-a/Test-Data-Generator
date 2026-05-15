@@ -118,24 +118,24 @@ namespace TestDataGeneratorApp.Presenters
             switch (StringFieldOptionView.FieldFormat)
             {
                 case StringField StringCell:
-                    StringFieldOptionView.Custom = StringCell.Custom;                    
+                    StringFieldOptionView.Custom = StringCell.Custom;
+                    SetBase(StringCell.BaseType); // first to be updated as the fields being changed triggers the events which changes others to default values
                     StringFieldOptionView.ContainsNumbers = StringCell.ContainsNumbers;
                     StringFieldOptionView.ContainsUppercase = StringCell.ContainsUpperCase;
-                    StringFieldOptionView.ContainsLowercase = StringCell.ContainsLowerCase;
-                    SetBase(StringCell.BaseType);
+                    StringFieldOptionView.ContainsLowercase = StringCell.ContainsLowerCase;                    
                     StringFieldOptionView.Prefix = StringCell.Prefix;
                     StringFieldOptionView.StaysTheSame = StringCell.StaysTheSame;
-                    // last to be updated as the other fields being changed triggers the events which changes them to default values
+                    
                     StringFieldOptionView.MaxLength = StringCell.MaxLength;
                     StringFieldOptionView.MinLength = StringCell.MinLength;
                     break;
                 default:
                     StringField newStringField = new();                    
-                    StringFieldOptionView.Custom = newStringField.Custom;                    
+                    StringFieldOptionView.Custom = newStringField.Custom;
+                    SetBase(newStringField.BaseType);
                     StringFieldOptionView.ContainsNumbers = newStringField.ContainsNumbers;
                     StringFieldOptionView.ContainsUppercase = newStringField.ContainsUpperCase;
-                    StringFieldOptionView.ContainsLowercase = newStringField.ContainsLowerCase;
-                    SetBase(newStringField.BaseType);
+                    StringFieldOptionView.ContainsLowercase = newStringField.ContainsLowerCase;                    
                     StringFieldOptionView.Prefix = newStringField.Prefix;
                     StringFieldOptionView.StaysTheSame = newStringField.StaysTheSame;
                     StringFieldOptionView.MaxLength = newStringField.MaxLength;
